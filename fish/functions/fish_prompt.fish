@@ -1,5 +1,5 @@
 function fish_prompt
-    echo -n \n(set_color 808080)"╭─"
+    echo -n \n(set_color 808080)"╭"
     echo -n (set_color yellow)"$USER"
     echo -n (set_color white)": "
     echo -n (set_color blue)(prompt_pwd)(set_color white)
@@ -18,6 +18,7 @@ function fish_prompt
         set -g __fish_git_prompt_char_cleanstate ""
     end
     if not set -q __fish_git_prompt_color_dirtystate
+        set -g __fish_git_prompt_char_dirtystate "+"
         set -g __fish_git_prompt_color_dirtystate yellow
     end
     if not set -q __fish_git_prompt_color_stagedstate
