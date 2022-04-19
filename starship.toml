@@ -1,33 +1,49 @@
-format = """
-$username\
-$directory\
-$git_branch\
-$git_status\
-$line_break\
-$character"""
-
 # Inserts a blank line between shell prompts
 add_newline = true
 
-# Username
+# Use custom format
+format = """
+╭$username\
+$directory\
+$git_branch\
+$git_status\
+$character"""
+
+# username
 [username]
 show_always = true
-format = '[$user](184): '
+format = "[$user](yellow): "
 
-# Directory
+
+# directory
 [directory]
-truncation_symbol = '...'
+truncation_length = 3
+truncation_symbol = "…/"
 truncate_to_repo = true
-format = '[$path](172) '
+format = "[$path](blue) "
 
-# Git
+# Git Branch
 [git_branch]
-format = "[$branch]()"
+format = "\\([$branch](purple)\\)"
 
-# Replace the "❯" symbol in the prompt with "➜"
-[character] # The name of the module we are configuring is "character"
-success_symbol = "[➜](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
+# Git Status
+[git_status]
+disabled = false
+staged = "[$count](green)"
+untracked = "[…$count](blue)"
+modified = "[+$count](yellow)"
+deleted = "[✘$count](red)"
+conflicted = ""
+ahead = ""
+behind = ""
+diverged = ""
+up_to_date = ""
+stashed = ""
+renamed = ""
+format = " $all_status"
 
-# Disable the package module, hiding it from the prompt completely
-[package]
-disabled = true
+# character
+[character]
+format = "\n╰─[❯](red)[❯](yellow)[❯](green) "
+
+
