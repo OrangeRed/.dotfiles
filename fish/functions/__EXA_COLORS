@@ -1,0 +1,15 @@
+### https://the.exa.website/docs/colour-themes
+
+### https://www.ditig.com/256-colors-cheat-sheet
+
+EXA_COLORS = "
+
+da=38;5;245 :
+di=38;5;245 :
+*.*sh=32 :
+*.*css*=38;5;159 :
+*.js*=33 :
+*.ts*=34 :
+*.yml=31
+
+"
