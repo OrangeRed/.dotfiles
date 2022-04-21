@@ -1,7 +1,0 @@
-c "clear"
-ls "ls -a --color"
-gll "git pull"
-gsh "git push"
-gst "git status $argv"
-ghk "git checkout (-b) $argv"
-fsh "git push -u origin $current_branch:feature/EP-$current_branch"
