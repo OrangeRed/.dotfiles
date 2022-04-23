@@ -1,10 +1,10 @@
 ### Aliases ###
 c "clear"
-l "exa --all --icons"
+ls "exa --all --icons"
 ll "exa --all --long --tree --level=1 --icons"
 
 ### Git ###
-gll "git pull $argv"
-gsh "git push $argv"
+ggl "git pull $argv"
+ggp "git push $argv"
 gst "git status $argv"
 ghk "git checkout (-b) $argv"

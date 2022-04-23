@@ -18,11 +18,14 @@ function fish_prompt
         set -g __fish_git_prompt_char_cleanstate ""
     end
     if not set -q __fish_git_prompt_color_dirtystate
-        set -g __fish_git_prompt_char_dirtystate "+"
+#       set -g __fish_git_prompt_char_dirtystate "+"
+        set -g __fish_git_prompt_char_dirtystate "~"
+
         set -g __fish_git_prompt_color_dirtystate yellow
     end
     if not set -q __fish_git_prompt_color_stagedstate
-        set -g __fish_git_prompt_char_stagedstate ""
+#       set -g __fish_git_prompt_char_stagedstate ""
+        set -g __fish_git_prompt_char_stagedstate "+"
         set -g __fish_git_prompt_color_stagedstate green
     end
     if not set -q __fish_git_prompt_color_invalidstate
