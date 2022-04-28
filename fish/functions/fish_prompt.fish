@@ -1,6 +1,6 @@
 function fish_prompt
     echo -n \n(set_color 808080)"╭"
-    echo -n (set_color yellow)"$USER"
+    echo -n (set_color E5C07B)"$USER"
     echo -n (set_color white)": "
     echo -n (set_color blue)(prompt_pwd)(set_color white)
 
@@ -14,17 +14,16 @@ function fish_prompt
         set -g __fish_git_prompt_char_stateseparator "|"
     end
     if not set -q __fish_git_prompt_color_branch
-        set -g __fish_git_prompt_color_branch magenta --bold
+        # magenta: b97ad6
+        set -g __fish_git_prompt_color_branch b97ad6 --bold
         set -g __fish_git_prompt_char_cleanstate ""
     end
     if not set -q __fish_git_prompt_color_dirtystate
-#       set -g __fish_git_prompt_char_dirtystate "+"
         set -g __fish_git_prompt_char_dirtystate "~"
 
         set -g __fish_git_prompt_color_dirtystate yellow
     end
     if not set -q __fish_git_prompt_color_stagedstate
-#       set -g __fish_git_prompt_char_stagedstate ""
         set -g __fish_git_prompt_char_stagedstate "+"
         set -g __fish_git_prompt_color_stagedstate green
     end
@@ -41,6 +40,7 @@ function fish_prompt
     echo -n (fish_vcs_prompt)
 
     echo -n \n(set_color 808080)"╰─"
-    echo -n (set_color red)'❯'(set_color yellow)'❯'(set_color green)'❯ '
+    #         red: #E06C75      yellow: #E5C07B     green: #98C379
+    echo -n (set_color E06C75)'❯'(set_color E5C07B)'❯'(set_color 98C379)'❯ '
     set_color normal
 end
