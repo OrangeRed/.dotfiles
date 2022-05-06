@@ -11,30 +11,31 @@ function fish_prompt
         set -g __fish_git_prompt_showupstream none
     end
     if not set -q __fish_git_prompt_char_stateseparator 
-        set -g __fish_git_prompt_char_stateseparator "|"
+        set -g __fish_git_prompt_char_stateseparator ""
     end
     if not set -q __fish_git_prompt_color_branch
         # magenta: b97ad6
         set -g __fish_git_prompt_color_branch b97ad6 --bold
         set -g __fish_git_prompt_char_cleanstate ""
     end
+    if not set -q __fish_git_prompt_color_stagedstate
+        set -g __fish_git_prompt_char_stagedstate ""
+        set -g __fish_git_prompt_color_stagedstate green
+    end
     if not set -q __fish_git_prompt_color_dirtystate
         set -g __fish_git_prompt_char_dirtystate "~"
 
         set -g __fish_git_prompt_color_dirtystate yellow
     end
-    if not set -q __fish_git_prompt_color_stagedstate
-        set -g __fish_git_prompt_char_stagedstate "+"
-        set -g __fish_git_prompt_color_stagedstate green
+    if not set -q __fish_git_prompt_color_untrackedfiles
+        set -g __fish_git_prompt_char_untrackedfiles "+"
+        set -g __fish_git_prompt_color_untrackedfiles blue
     end
     if not set -q __fish_git_prompt_color_invalidstate
         set -g __fish_git_prompt_char_invalidstate "✘"
         set -g __fish_git_prompt_color_invalidstate red
     end
-    if not set -q __fish_git_prompt_color_untrackedfiles
-        set -g __fish_git_prompt_char_untrackedfiles "…"
-        set -g __fish_git_prompt_color_untrackedfiles blue
-    end
+
 
     # printf '%s ' (fish_vcs_prompt | sed 's/\([1-9]\+\)/\1 /g')
     echo -n (fish_vcs_prompt)
