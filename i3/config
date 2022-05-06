@@ -67,6 +67,9 @@ title_align center
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# Disabl focus on hover
+focus_follows_mouse no
+
 # switch to workspace
 bindsym $mod+1    workspace  $ws1
 bindsym $mod+2    workspace  $ws2
@@ -338,6 +341,9 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 # set wallpaper
 exec --no-startup-id sleep 2 && nitrogen --restore
 
+# set brightness to zero on startup
+exec brightnessctl s 0
+
 # set powersavings for display:
 exec --no-startup-id xset s 480 dpms 600 600 600
 
@@ -527,5 +533,4 @@ bindsym $mod+Tab exec rofi -show window \
 #		-config ~/.config/rofi/rofidmenu.rasi
 
 
-focus_follows_mouse no
-exec --no-startup-id "$HOME/.config/i3/scripts/1920x1200.sh"
+
