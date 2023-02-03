@@ -3,11 +3,25 @@ if status is-interactive
 end
 
 
-# Disable Welcome Message
+## Disable Welcome Message
 set fish_greeting
+#
 
 
-# EXA COLORS
+## env variables that shouldn't be shared
+# set -a ENV_FILES /path/to/file
+# ...
+for file in $ENV_FILES
+  for line in (cat $file | grep -v '^#' | grep -v '^\s*$')
+    set item (string replace export "" $line | string split -m 1 '=')
+    set -gx (string trim $item[1]) (string trim $item[2])
+  end
+end
+#
+
+
+## EXA COLORS
+# consider loading this on session start instead
 set -Ux EXA_COLORS (echo "
 da=38;5;245:
 di=38;5;245:
