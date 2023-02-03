@@ -1,36 +1,55 @@
 function fish_prompt
     echo -n \n(set_color 808080)"╭"
-    echo -n (set_color E5C07B)"$USER"
-    echo -n (set_color white)": "
-    echo -n (set_color blue)(prompt_pwd)(set_color white)
+    echo -n (set_color yellow)"$USER"
+    echo -n (set_color normal)": "
+    echo -n (set_color blue)(prompt_pwd)(set_color normal)
 
+
+    # Branch Names and Status
     if not set -q __fish_git_prompt_show_informative_status
-        set -g __fish_git_prompt_show_informative_status 1
+        set -g __fish_git_prompt_show_informative_status true
     end
+
+    # Upstream Name
     if not set -q __fish_git_prompt_showupstream
         set -g __fish_git_prompt_showupstream none
     end
-    if not set -q __fish_git_prompt_char_stateseparator 
+
+    # Separator
+    if not set -q __fish_git_prompt_char_stateseparator
         set -g __fish_git_prompt_char_stateseparator ""
     end
+
+
+    # Branch Color
     if not set -q __fish_git_prompt_color_branch
-        # magenta: b97ad6
-        set -g __fish_git_prompt_color_branch b97ad6 --bold
+        set -g __fish_git_prompt_color_branch brred --bold
         set -g __fish_git_prompt_char_cleanstate ""
     end
+
+
+    # Staged File
     if not set -q __fish_git_prompt_color_stagedstate
         set -g __fish_git_prompt_char_stagedstate ""
         set -g __fish_git_prompt_color_stagedstate green
     end
+
+
+    # Changed Files
     if not set -q __fish_git_prompt_color_dirtystate
         set -g __fish_git_prompt_char_dirtystate "~"
-
         set -g __fish_git_prompt_color_dirtystate yellow
     end
+
+
+    # Untracked Files
     if not set -q __fish_git_prompt_color_untrackedfiles
         set -g __fish_git_prompt_char_untrackedfiles "+"
         set -g __fish_git_prompt_color_untrackedfiles blue
     end
+
+
+    # Invalid State
     if not set -q __fish_git_prompt_color_invalidstate
         set -g __fish_git_prompt_char_invalidstate "✘"
         set -g __fish_git_prompt_color_invalidstate red
@@ -39,9 +58,8 @@ function fish_prompt
 
     # printf '%s ' (fish_vcs_prompt | sed 's/\([1-9]\+\)/\1 /g')
     echo -n (fish_vcs_prompt)
-
+ 
     echo -n \n(set_color 808080)"╰─"
-    #         red: #E06C75      yellow: #E5C07B     green: #98C379
-    echo -n (set_color E06C75)'❯'(set_color E5C07B)'❯'(set_color 98C379)'❯ '
+    echo -n (set_color red)'❯'(set_color yellow)'❯'(set_color green)'❯ '
     set_color normal
 end
