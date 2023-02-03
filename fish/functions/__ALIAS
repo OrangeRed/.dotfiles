@@ -1,5 +1,4 @@
 ### Aliases ###
-c "clear"
 ls "exa --all --icons"
 ll "exa --all --long --tree --level=1 --icons"
 
