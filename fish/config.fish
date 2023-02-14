@@ -12,7 +12,7 @@ set fish_greeting
 # set -a ENV_FILES /path/to/file
 # ...
 for file in $ENV_FILES
-  for line in (cat $file | grep -v '^#' | grep -v '^\s*$')
+  for line in (cat $file | grep -v '^#' | grep -v '^\s*$' | sed -e 's/"//g')
     set item (string replace export "" $line | string split -m 1 '=')
     set -gx (string trim $item[1]) (string trim $item[2])
   end
