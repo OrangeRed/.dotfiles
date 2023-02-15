@@ -1,9 +1,9 @@
 function prune-branches -a arg1 --description "clean branches with deleted remote"
-  if test -z $arg1
+  if test $arg1 = "-D"
+    set del_flag "-D"
+  else if test -z $arg1
     or test $arg1 = "-d"
     set del_flag "-d"
-  else if test $arg1 = "-D"
-    set del_flag "-D"
   else
     echo $arg1 "is not a valid argument"
     return
