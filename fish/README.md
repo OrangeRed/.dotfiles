@@ -20,4 +20,5 @@ alias ll="exa --all --long --tree --level=1 $argv \
 alias ggl="git pull $argv;"
 alias ggp="git push $argv;"
 alias ggt="git status $argv;"
+alias prune-branches="git branch -vv | awk '/: gone]/{print $1}' | xargs git branch $del_flag"
 ```
