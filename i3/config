@@ -337,9 +337,9 @@ bar {
 	workspace_min_width 40
 
 	colors {
-		separator          	$base
-		background         	$base
-		statusline         	$text
+		separator           $base
+		background          $base
+		statusline          $text
 		#class              border    bg        txt     indicator
 		focused_workspace   $blue     $blue     $base   $blue
 		active_workspace    $blue     $blue     $text   $blue
