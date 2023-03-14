@@ -99,9 +99,9 @@ bindsym XF86MonBrightnessUp   exec brightnessctl s +5 && notify-send "Brightness
 bindsym XF86MonBrightnessDown exec brightnessctl s 5- && notify-send "Brightness - $(brightnessctl g)%" -t 500
 
 
-#####################
-#	 	Layout Stuff:		#
-#####################
+#################
+#	Layout Stuff:	#
+#################
 
 # split in horizontal orientation
 bindsym $mod+h split h
@@ -277,14 +277,14 @@ bar {
 	workspace_min_width 40
 
 	colors {
-		separator          	$lavender
+		separator          	$base
 		background         	$base
 		statusline         	$text
-		#class							border				bg						txt					indicator
-		focused_workspace		$blue		      $base					$text		    $blue
-		active_workspace		$blue		      $base		      $text		    $blue
-		inactive_workspace	$base			    $base			    $text				$base
-		urgent_workspace		$red  		    $red		      $base			  $red
+		#class							border		bg				txt			indicator
+		focused_workspace		$blue			$blue			$base		$blue
+		active_workspace		$blue			$blue			$text		$blue
+		inactive_workspace	$base			$base			$text		$base
+		urgent_workspace		$mauve		$mauve		$base		$mauve
 	}
 }
 
@@ -433,7 +433,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # in this cases better disable dex and use manual starting apps using xdg/autostart
 # if enabled you should comment welcome app.
 #exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/
-exec --no-startup-id dex --autostart --environment i3
+# exec --no-startup-id dex --autostart --environment i3
 
 # start welcome app
 #exec --no-startup-id sh /usr/share/endeavouros/scripts/welcome --startdelay=3 
@@ -478,10 +478,10 @@ exec --no-startup-id fcitx5 -d
 # you need to have tray apps started here:
 
 # start blueberry app for managing bluetooth devices from tray:
-# exec --no-startup-id blueman-applet
+exec --no-startup-id blueman-applet
 
 # networkmanager-applet
-# exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet
 
 # clipman-applet
 #exec --no-startup-id xfce4-clipman
