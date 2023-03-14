@@ -340,7 +340,7 @@ bar {
 		separator          	$base
 		background         	$base
 		statusline         	$text
-		#class							border		bg				txt			indicator
+		#class              border    bg        txt     indicator
 		focused_workspace   $blue     $blue     $base   $blue
 		active_workspace    $blue     $blue     $text   $blue
 		inactive_workspace  $base     $base     $text   $base
