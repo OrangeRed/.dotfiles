@@ -263,6 +263,9 @@ default_border pixel 2
 for_window [class=".*"] border pixel 2
 default_floating_border none
 
+# window title alignment
+title_align center
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -411,7 +414,7 @@ bindsym $mod+Tab exec rofi -show window \
 #		-config ~/.config/rofi/rofidmenu.rasi
 
 bindsym $mod+c exec --no-startup-id rofi -show calc -terse -no-show-match -no-sort -no-persist-history \
-    -calc-command "echo -n '{result}' | xclip" \
+    -calc-command "echo -n '{result}' | xclip" -in \
     -config ~/.config/rofi/rofidmenu.rasi
 
 
