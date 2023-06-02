@@ -69,7 +69,7 @@ bindsym $mod+Shift+0    move container to workspace  $ws10
 # bind program to workspace:
 assign [class="Alacritty"]    $ws1
 assign [class="VSCodium"]     $ws2
-assign [class="(?i)firefox"]  $ws3
+# assign [class="(?i)firefox"]  $ws3
 assign [class="Slack"]        $ws4
 assign [class="Thunar"]       $ws4
 assign [class="Gthumb"]       $ws5

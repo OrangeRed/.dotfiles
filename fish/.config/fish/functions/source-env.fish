@@ -7,7 +7,7 @@ function 'source-env' --wraps=source --description 'source env files'
         sed -e 's/"//g'     # Remove quotation marks
       )
 
-      set -l item (string replace export "" $line | string split -m 1 '=')
+      set item (string replace export "" $line | string split -m 1 '=')
       echo sourced (string trim $item[1])
       set -Ux (string trim $item[1]) (string trim $item[2])
     end
