@@ -6,3 +6,7 @@
 | **nvm**       | [jorgebucaran/nvm.fish](https://github.com/jorgebucaran/nvm.fish)   |
 | **SSH agent** | [danhper/fish-ssh-agent](https://github.com/danhper/fish-ssh-agent) |
 | **Z Jumping** | [jethrokuan/z](https://github.com/jethrokuan/z)                     |
+
+### Chromecast Port Stuff
+
+https://forum.endeavouros.com/t/casting-to-a-chromecast-device/28598/2
