@@ -1,4 +1,4 @@
-function 'source-env' --wraps=source --description 'source env files'
+function 'source-env' --wraps=source --description 'source non fish compliant env files'
   for file in $argv
     for line in (cat $file |
         grep -v '^#' |      # Ignore lines that have the # character
