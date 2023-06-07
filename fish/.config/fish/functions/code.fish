@@ -1,3 +1,4 @@
-function code --wraps=clear --description 'alias codium'
+# Alias codium
+function code --wraps 'codium'
   codium $argv;
 end

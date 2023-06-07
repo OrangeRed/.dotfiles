@@ -1,3 +1,4 @@
-function ggl --wraps='git pull' --description 'alias git pull'
+# Alias git pull
+function ggl --wraps='git pull'
   git pull $argv; 
 end

@@ -1,3 +1,4 @@
-function ggt --wraps='git status' --description 'alias git status'
+# Alias git status
+function ggt --wraps 'git status'
   git status $argv; 
 end
