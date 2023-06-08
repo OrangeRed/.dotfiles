@@ -8,9 +8,8 @@ EnumerateSkipFirst=False
 
 [Hotkey/TriggerKeys]
 0=Super+space
-1=Alt+grave
-# 2=Zenkaku_Hankaku
-# 3=Hangul
+1=Ctrl+space
+2=Alt+grave
 
 [Hotkey/EnumerateForwardKeys]
 0=Control+Shift_L

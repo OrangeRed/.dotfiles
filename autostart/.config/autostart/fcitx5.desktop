@@ -2,7 +2,7 @@
 Name=Fcitx5
 GenericName=Fcitx5 Input Method
 Comment=Start Fcitx5
-Exec=fcitx5
+Exec=fcitx5 --enable mozc
 Icon=fcitx
 Terminal=false
 Type=Application
