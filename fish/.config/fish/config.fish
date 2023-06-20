@@ -3,4 +3,4 @@ if status is-interactive
 end
 
 # Hotkeys
-bind \cf "fzf-cd; commandline -f repaint;"
+bind \cf fzf-cd
