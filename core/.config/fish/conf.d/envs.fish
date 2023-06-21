@@ -1,5 +1,7 @@
 # Manually source these envs if you don't want to reboot
-
+if status is-login
+    or test (status current-command) = "source"
+    
 set -Ux MOZ_ENABLE_WAYLAND "1 firefox"
 
 set -Ux EXA_COLORS "\
@@ -24,3 +26,5 @@ set -Ux GTK_IM_MODULE "fcitx"
 set -Ux QT_IM_MODULE "fcitx"
 set -Ux SDL_IM_MODULE "fcitx"
 set -Ux XMODIFIERS "@im=fcitx"
+
+end
