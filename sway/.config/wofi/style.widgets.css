@@ -1,0 +1,45 @@
+@define-color highlight #f5c2e7;
+@define-color base1  #404552;
+@define-color base2  #40455;
+@define-color base3  #4b5160;
+
+* {
+  font-family: FiraCode Nerd Font;
+}
+
+#window {
+  border: 1px solid @highlight;
+  margin: 0px 5px 0px 5px;
+}
+
+#inner-box {
+  background-color: @base2;
+}
+
+#outer-box {
+  margin: 5px;
+  padding: 10px;
+  background-color: @base2;
+  margin-top: -22px;
+}
+
+#text {
+  padding: 5px;
+  color: white;
+}
+
+#text:selected {
+  color: black;
+}
+
+#entry:nth-child(even) {
+  background-color: @base1;
+}
+
+#entry {
+  background-color: @base3;
+}
+
+#entry:selected {
+  background-color: @highlight;
+}

@@ -36,6 +36,14 @@
   color: #f38ba8;
 }
 
+#mode {
+  margin: 5px;
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: #f5c2e7;
+  color: #1e1d2f;
+}
+
 #clock,
 #temperature,
 #battery,

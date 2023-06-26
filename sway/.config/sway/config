@@ -22,7 +22,7 @@ set $term foot
 # Your preferred application launcher
 set $menu wofi -c ~/.config/wofi/config -I
 
-set $powermenu ~/.config/waybar/scripts/power-menu.sh
+set $powermenu ~/.config/sway/scripts/power-menu.sh
 
 
 ###################
@@ -128,20 +128,20 @@ bindsym $mod+d exec $menu
 # Screenshot
 # @adastx, you can use wl-copy for copying, as example:
 # wl-copy < $(grimshot save area 123.png)
-bindsym print exec /usr/share/sway/scripts/grimshot --notify save output
+bindsym print exec wl-copy < $(/usr/share/sway/scripts/grimshot --notify save output)
 bindsym Shift+print exec ~/.config/sway/scripts/screenshot.sh
 
 # exit-menu
-bindsym $mod+x exec $powermenu
+bindsym $mod+x exec ~/.config/sway/scripts/power-menu.sh
+
+# calculator
+bindsym $mod+c exec ~/.config/sway/scripts/qalculate.sh
 
 # Exit sway (logs you out of your Wayland session)
 # bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
-# Power Profiles menu switcher (rofi)
-# bindsym $mod+Shift+p exec ~/.config/i3/scripts/power-profiles
-
 # activities
-bindsym $mod+p exec ~/.config/wofi/windows.py
+bindsym $mod+p exec ~/.config/sway/scripts/windows.py
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.

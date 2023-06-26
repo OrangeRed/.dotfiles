@@ -23,8 +23,8 @@
   },
 
   "temperature": {
-    "interval": 60,
-    "critical-threshold": 50,
+    "interval": 10,
+    "critical-threshold": 70,
     "format-critical": "{temperatureC}°",
     "format": "" // An empty format will hide the module
   },
@@ -77,7 +77,7 @@
 
   "custom/power": {
     "format": "⏻",
-    "on-click": "exec ~/.config/waybar/scripts/power-menu.sh",
+    "on-click": "exec ~/.config/sway/scripts/power-menu.sh",
     "tooltip": false
   }
 }
