@@ -1,4 +1,4 @@
 # Alias git status
 function ggt --wraps 'git status'
-  git status $argv; 
+    git status $argv
 end

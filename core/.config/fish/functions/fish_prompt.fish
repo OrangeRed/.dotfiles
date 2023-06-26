@@ -30,7 +30,7 @@ function fish_prompt
 
     # Staged File
     if not set -q __fish_git_prompt_color_stagedstate
-        set -g __fish_git_prompt_char_stagedstate ""
+        set -g __fish_git_prompt_char_stagedstate "←"
         set -g __fish_git_prompt_color_stagedstate green
     end
 
@@ -58,7 +58,7 @@ function fish_prompt
 
     # printf '%s ' (fish_vcs_prompt | sed 's/\([1-9]\+\)/\1 /g')
     echo -n (fish_vcs_prompt)
- 
+
     echo -n \n(set_color 808080)"╰─"
     echo -n (set_color red)'❯'(set_color yellow)'❯'(set_color green)'❯ '
     set_color normal
