@@ -1,0 +1,83 @@
+{
+  "layer": "bottom",
+  "position": "top",
+  "height": 10,
+  "margin": "3, 0, 2, 0",
+  "modules-left": ["sway/workspaces", "sway/mode"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "temperature",
+    "battery",
+    "pulseaudio",
+    "idle_inhibitor",
+    "tray",
+    "custom/power"
+  ],
+
+  "clock": {
+    "interval": 10,
+    "format": "{:%A %b %d - %H:%M %Z}",
+    "align": 1,
+    "timezones": ["America/New_York", "America/Los_Angeles", "Japan"],
+    "tooltip-format": "{timezoned_time_list}\n\n<tt><big>{calendar}</big></tt>"
+  },
+
+  "temperature": {
+    "interval": 60,
+    "critical-threshold": 50,
+    "format-critical": "{temperatureC}°",
+    "format": "" // An empty format will hide the module
+  },
+
+  "battery": {
+    "states": {
+      // "good": 95,
+      "warning": 33,
+      "critical": 10
+    },
+    "format": "{icon}  {capacity}%",
+    // "format-full": "",
+    // "format-good": "", // An empty format will hide the module
+    "format-critical": "  {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-icons": ["", "", "", "", ""]
+  },
+
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "{icon} {volume}% {format_source}",
+    "format-bluetooth": "{icon} {volume}% {format_source}",
+    "format-bluetooth-muted": "  {format_source}",
+    "format-muted": "  {format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "headset": "🎧",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
+  },
+
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 10
+  },
+
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "exec ~/.config/waybar/scripts/power-menu.sh",
+    "tooltip": false
+  }
+}

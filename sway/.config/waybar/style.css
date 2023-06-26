@@ -1,0 +1,81 @@
+* {
+  transition: none;
+  box-shadow: none;
+  font-family: FiraCode Nerd Font;
+  font-size: 16px;
+}
+
+#waybar {
+  margin-top: 14px;
+  background-color: #1e1d2f;
+  opacity: 0.9;
+  border-radius: 12px;
+  border: 2px solid #f5c2e7;
+}
+
+#workspaces {
+  margin: 0 3px;
+}
+
+#workspaces button {
+  margin: 3px 0;
+  padding: 0.5rem 1rem;
+}
+
+#workspaces button.focused {
+  border-radius: 10px;
+  background-color: #f5c2e7;
+  color: #1e1d2f;
+}
+
+#workspaces button.urgent {
+  border-radius: 10px;
+}
+
+#workspaces button.urgent * {
+  color: #f38ba8;
+}
+
+#clock,
+#temperature,
+#battery,
+#pulseaudio,
+#idle_inhibitor,
+/* #network, */
+/* #bluetooth, */
+/* #backlight,  */
+#tray {
+  margin: 4px;
+  padding: 0 5px;
+  border-radius: 20px;
+  min-width: 10px;
+  background-color: transparent;
+}
+
+#battery.charging {
+  color: #a6e3a1;
+}
+
+#battery.warning {
+  color: yellow;
+}
+
+#temperature.critical,
+#battery.critical {
+  color: red;
+}
+
+#pulseaudio.bluetooth {
+  padding-top: 4px;
+}
+
+#pulseaudio.muted {
+  padding-top: 0;
+}
+
+#custom-power {
+  margin: 4px;
+  padding: 0 15px 0 0;
+  border-radius: 10px;
+  min-width: 15px;
+}
