@@ -24,7 +24,7 @@
 
   "temperature": {
     "interval": 10,
-    "critical-threshold": 70,
+    "critical-threshold": 80,
     "format-critical": "{temperatureC}°",
     "format": "" // An empty format will hide the module
   },
