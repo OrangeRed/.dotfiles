@@ -1,3 +1,6 @@
 [submodule "sway/.local/share/wallpaper"]
 	path = sway/.local/share/wallpaper
 	url = https://github.com/OrangeRed/wallpapers
+[submodule "sway/.local/share/wallpapers"]
+	path = sway/.local/share/wallpapers
+	url = https://github.com/OrangeRed/wallpapers
