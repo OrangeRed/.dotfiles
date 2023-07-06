@@ -60,10 +60,6 @@
   background-color: transparent;
 }
 
-#battery.charging {
-  color: #a6e3a1;
-}
-
 #battery.warning {
   color: yellow;
 }
@@ -71,6 +67,10 @@
 #temperature.critical,
 #battery.critical {
   color: red;
+}
+
+#battery.charging {
+  color: #a6e3a1;
 }
 
 #pulseaudio.bluetooth {
