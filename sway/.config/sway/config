@@ -389,7 +389,7 @@ exec --no-startup-id fcitx5 -d
 output eDP-1 resolution 1920x1080 position 1920,0
 
 # Wallpaper
-output eDP-1 bg $(find ~/.local/share/wallpapers -type f -maxdepth 1 | shuf -n1) fill
+output eDP-1 bg $(find ~/.local/share/wallpapers -type f -iname "*.png" -o -iname "*.jpg" -maxdepth 1 | shuf -n1) fill #000000
 
 # Input configuration
 #
