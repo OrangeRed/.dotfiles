@@ -1,0 +1,30 @@
+{
+  "workbench.startupEditor": "none",
+
+  // Editor options
+  "editor.fontFamily": "FiraCode Nerd Font",
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "workbench.editor.labelFormat": "short",
+
+  // File Explorer
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.tree.indent": 12,
+
+  // Formatter Options
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[fish]": {
+    "editor.defaultFormatter": "bmalehorn.vscode-fish"
+  },
+
+  "[svelte]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "svelte.enable-ts-plugin": true,
+  "prettier.documentSelectors": ["**/*.svelte"],
+
+  /** ------Auto generated------- **/
+  "autoOpenPreviewPanel.openPreviewToSide": true
+}

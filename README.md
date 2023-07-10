@@ -7,6 +7,8 @@
 ├──  conf
 ├──  fd
 ├── 󰈺 fish
+├──  neofetch
+├──  vscode
 ├──  vimium.json
 │
 │ ### I3
