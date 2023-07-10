@@ -1,26 +1,30 @@
 ## Configs
 
 ```
- .
-├──  core
-│   ├──  btop
-│   ├──  env.d
-│   ├──  fd
-│   └──  fish
+ .config
+│ ### Core
+├──  btop
+├──  conf
+├──  fd
+├── 󰈺 fish
+├──  vimium.json
+│
+│ ### I3
 ├──  i3
-│   ├──  i3
-│   └──  ranger
+├──  ranger (change image_preview_method)
+│
+│ ### Sway
+├──  foot
+├──  mako
+├──  ranger
 ├──  sway
-│   ├──  foot
-│   ├──  mako
-│   ├──  ranger
-│   ├──  sway
-│   ├──  swaylock
-│   ├──  waybar
-│   └──  wofi
-└──  japanese
-    ├──  fcitx5 (autostart, env.d, theme)
-    └──  mpv (mpvacious)
+├──  swaylock
+├──  waybar
+├──  wofi
+│
+│ ### Japanese
+├──  fcitx5
+└──  mpv (mpvacious)
 ```
 
 ---
