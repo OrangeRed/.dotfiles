@@ -280,7 +280,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 1- && notify-send "Brightness
 ##############################
 
 # Apply gtk theming
-exec_always ~/.config/sway/scripts/import-gsettings
+exec_always ~/.config/sway/scripts/import-gsettings.sh
 
 ### GTK/Font/Icons
 
