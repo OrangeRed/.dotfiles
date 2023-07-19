@@ -27,4 +27,5 @@ di=38;5;245:\
     set -Ux SDL_IM_MODULE fcitx
     set -Ux XMODIFIERS "@im=fcitx"
 
+    set -Ux SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/gcr/ssh"
 end
