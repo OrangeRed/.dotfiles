@@ -22,10 +22,10 @@ di=38;5;245:\
 --color=fg:#cdd6f4,header:#f38ba8,info:yellow,pointer:#f38ba8 \
 --color=marker:#f38ba8,fg+:#cdd6f4,prompt:#f38ba8,hl+:#f38ba8"
 
-    set -Ux GTK_IM_MODULE fcitx
-    set -Ux QT_IM_MODULE fcitx
-    set -Ux SDL_IM_MODULE fcitx
-    set -Ux XMODIFIERS "@im=fcitx"
+    set -Ux GTK_IM_MODULE fcitx5
+    set -Ux QT_IM_MODULE fcitx5
+    set -Ux SDL_IM_MODULE fcitx5
+    set -Ux XMODIFIERS "@im=fcitx5"
 
     set -Ux SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/gcr/ssh"
 end
