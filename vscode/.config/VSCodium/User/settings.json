@@ -6,7 +6,6 @@
   "editor.fontLigatures": "'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08'",
   "editor.formatOnSave": true,
   "workbench.editor.labelFormat": "short",
-  "editor.suggest.insertMode": "replace",
 
   // File Explorer
   "explorer.confirmDelete": false,
@@ -25,6 +24,10 @@
   },
   "svelte.enable-ts-plugin": true,
   "prettier.documentSelectors": ["**/*.svelte"],
+
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
 
   /** ------Auto generated------- **/
   "autoOpenPreviewPanel.openPreviewToSide": true

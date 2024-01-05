@@ -4,7 +4,7 @@ function source-env --wraps source
         for line in (cat $file |
         grep -v '^#' |      # Ignore lines that have the # character
         grep -v '^\s*$' |   # Ignore new / empty lines
-        grep '^\s*export' | # Select lines that start with 'export'
+        # grep '^\s*export' | # Select lines that start with 'export'
         sed -e 's/"//g'     # Remove quotation marks
       )
 
