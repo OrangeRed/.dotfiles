@@ -6,6 +6,7 @@
   "modules-left": ["sway/workspaces", "sway/mode"],
   "modules-center": ["clock"],
   "modules-right": [
+    "mpd",
     "temperature",
     "battery",
     "pulseaudio",
@@ -27,6 +28,22 @@
     "critical-threshold": 80,
     "format-critical": "{temperatureC}°",
     "format": "" // An empty format will hide the module
+  },
+
+  "mpd": {
+    "server": "localhost",
+    "port": 6600,
+    "interval": 5,
+    "format": "{artist} - {title}",
+    "format-paused": "{stateIcon}",
+    "format-stopped": "",
+    "state-icons": {
+      "paused": "",
+      "playing": ""
+    },
+    "on-click": "mpc toggle",
+    "on-click-right": "ymuse",
+    "tooltip": false
   },
 
   "battery": {
