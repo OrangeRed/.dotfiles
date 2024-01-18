@@ -18,26 +18,27 @@
 │ ### Sway
 ├──  foot
 ├──  mako
+├──  mpd
 ├──  ranger
 ├──  sway
 ├──  swaylock
 ├──  waybar
 ├──  wofi
+├──  ymuse
 │
 │ ### Japanese
 ├──  fcitx5
-└──  mpv (mpvacious)
+└──  mpv (mpvacious)
 ```
 
 ---
 
 ### Fish Plugins (using fisher)
 
-| Plugin        | Path + Git                                                        |
-| ------------- | :---------------------------------------------------------------- |
-| **Fisher**    | [jorgebucaran/fisher](https://github.com/jorgebucaran/fisher)     |
-| **nvm**       | [jorgebucaran/nvm.fish](https://github.com/jorgebucaran/nvm.fish) |
-| **Z Jumping** | [jethrokuan/z](https://github.com/jethrokuan/z)                   |
+| Plugin     | Path + Git                                                        |
+| ---------- | :---------------------------------------------------------------- |
+| **Fisher** | [jorgebucaran/fisher](https://github.com/jorgebucaran/fisher)     |
+| **nvm**    | [jorgebucaran/nvm.fish](https://github.com/jorgebucaran/nvm.fish) |
 
 ### Fcitx5 Theme
 
