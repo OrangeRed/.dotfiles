@@ -34,15 +34,16 @@
     "server": "localhost",
     "port": 6600,
     "interval": 5,
-    "format": " {title}",
+    "format": "{title}",
     "format-paused": "{stateIcon}",
-    "format-stopped": "",
+    "format-stopped": "",
     "state-icons": {
       "paused": "",
       "playing": ""
     },
     "on-click": "mpc toggle",
-    "on-click-right": "ymuse",
+    "on-click-right": "exec ~/.config/waybar/scripts/copy-song.sh",
+    "on-click-middle": "ymuse",
     "tooltip": false,
     "unknown-tag": "  "
   },

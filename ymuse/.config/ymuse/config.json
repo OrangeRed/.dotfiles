@@ -9,22 +9,10 @@
     "QueueColumns": [
         {
             "ID": 0,
-            "Width": 0
-        },
-        {
-            "ID": 13,
-            "Width": 0
+            "Width": 152
         },
         {
             "ID": 2,
-            "Width": 0
-        },
-        {
-            "ID": 6,
-            "Width": 0
-        },
-        {
-            "ID": 8,
             "Width": 0
         },
         {
@@ -32,15 +20,15 @@
             "Width": 0
         },
         {
-            "ID": 9,
-            "Width": 0
-        },
-        {
-            "ID": 14,
-            "Width": 0
-        },
-        {
             "ID": 12,
+            "Width": 0
+        },
+        {
+            "ID": 11,
+            "Width": 0
+        },
+        {
+            "ID": 15,
             "Width": 0
         }
     ],
@@ -59,15 +47,31 @@
     "MaxSearchResults": 500,
     "Streams": [
         {
-            "Name": "Listen moe",
+            "Name": "Japan City Pop -日本のシティポップ",
+            "URI": "https://play.streamafrica.net/JapanCityPop"
+        },
+        {
+            "Name": "Listen.moe/jpop",
             "URI": "https://listen.moe/stream"
+        },
+        {
+            "Name": "Listen.moe/kpop",
+            "URI": "https://listen.moe/kpop/stream"
+        },
+        {
+            "Name": "Shonan Radio (JP)",
+            "URI": "http://shonanbeachfm.out.airtime.pro:8000/shonanbeachfm_a"
+        },
+        {
+            "Name": "Tropical 100 Salsa (Freeport NY)",
+            "URI": "https://stream.zeno.fm/cjgfujr8yhbvv?1705618886461"
         }
     ],
-    "LibraryPath": "",
+    "LibraryPath": "filesystem\u0001",
     "MainWindowDimensions": {
         "X": 20,
         "Y": 20,
-        "Width": 948,
+        "Width": 689,
         "Height": 976
     }
 }

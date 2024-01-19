@@ -47,10 +47,19 @@
 
 #mpd {
   margin: 5px;
-  padding: 0 1.3rem 0 1rem;
+  padding: 0 1rem;
   border-radius: 10px;
   background-color: #f5c2e7;
   color: #1e1d2f;
+}
+
+#mpd.paused {
+  padding: 0 1.3rem 0 1rem;
+}
+
+#mpd.stopped {
+  color: white;
+  background-color: transparent;
 }
 
 #clock,
