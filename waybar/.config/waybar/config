@@ -34,16 +34,17 @@
     "server": "localhost",
     "port": 6600,
     "interval": 5,
-    "format": "{artist} - {title}",
+    "format": " {title}",
     "format-paused": "{stateIcon}",
-    "format-stopped": "",
+    "format-stopped": "",
     "state-icons": {
       "paused": "",
       "playing": ""
     },
     "on-click": "mpc toggle",
     "on-click-right": "ymuse",
-    "tooltip": false
+    "tooltip": false,
+    "unknown-tag": "  "
   },
 
   "battery": {
