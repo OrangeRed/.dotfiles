@@ -201,10 +201,10 @@ bindsym $mod+t layout tabbed
 bindsym $mod+s layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Tab floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+Shift+Tab focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -371,6 +371,9 @@ exec nm-applet --indicator
 # start blueberry app for managing bluetooth devices from tray:
 exec --no-startup-id blueman-applet
 
+# Start IME
+exec --no-startup-id fcitx5 -d
+
 # GTK3 applications take a long time to start
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec hash dbus-update-activation-environment 2>/dev/null && \
@@ -382,14 +385,12 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
 # Sway Fader
 # exec python3 ~/.config/sway/scripts/swayfader.py      
 
-# Start IME
-exec --no-startup-id fcitx5 -d
-
-# Output configuration
-output eDP-1 resolution 1920x1080 position 1920,0
+# Output configuration. Get output codes using `sway-msg -t get_outputs`
+# output * resolution 1920x1080 position 1920,0
 
 # Wallpaper
-output eDP-1 bg $(find ~/.local/share/wallpapers -type f -not -iname "*.md"  -maxdepth 1 | shuf -n1) fill #000000
+set $wallpapers $HOME/.local/share/wallpapers
+output * bg $(find $wallpapers -maxdepth 1 -type f -regex \".*\(jpg\|jpeg\|png\)\" | shuf -n1) fill
 
 # Input configuration
 #

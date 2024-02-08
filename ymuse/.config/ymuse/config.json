@@ -47,8 +47,8 @@
     "MaxSearchResults": 500,
     "Streams": [
         {
-            "Name": "Japan City Pop -日本のシティポップ",
-            "URI": "https://play.streamafrica.net/JapanCityPop"
+            "Name": "Jazz Sakura",
+            "URI": "http://kathy.torontocast.com:3330/stream/1/?esPlayer\u0026cb=82181.mp3"
         },
         {
             "Name": "Listen.moe/jpop",
@@ -59,6 +59,10 @@
             "URI": "https://listen.moe/kpop/stream"
         },
         {
+            "Name": "Salsa (FR)",
+            "URI": "http://latinasalsa.ice.infomaniak.ch/latinasalsa.mp3"
+        },
+        {
             "Name": "Shonan Radio (JP)",
             "URI": "http://shonanbeachfm.out.airtime.pro:8000/shonanbeachfm_a"
         },
@@ -67,11 +71,11 @@
             "URI": "https://stream.zeno.fm/cjgfujr8yhbvv?1705618886461"
         }
     ],
-    "LibraryPath": "filesystem\u0001",
+    "LibraryPath": "artists\u0001",
     "MainWindowDimensions": {
         "X": 20,
         "Y": 20,
-        "Width": 689,
+        "Width": 819,
         "Height": 976
     }
 }

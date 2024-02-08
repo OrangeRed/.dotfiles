@@ -46,6 +46,8 @@
 }
 
 #mpd {
+  font-family: "Source Han Sans JP, FiraCode Nerd Font";
+  letter-spacing: 0.5px;
   margin: 5px;
   padding: 0 1rem;
   border-radius: 10px;
