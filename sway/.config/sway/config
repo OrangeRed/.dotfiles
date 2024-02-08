@@ -385,8 +385,10 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
 # Sway Fader
 # exec python3 ~/.config/sway/scripts/swayfader.py      
 
-# Output configuration. Get output codes using `sway-msg -t get_outputs`
-# output * resolution 1920x1080 position 1920,0
+# Output (Monitor) configuration.
+# output * res 1920x1080@60Hz # Default
+# To generate an outputs file for your monitor setup use a tool like [nwg-displays](https://github.com/nwg-piotr/nwg-displays)
+include ~/.config/sway/outputs
 
 # Wallpaper
 set $wallpapers $HOME/.local/share/wallpapers
