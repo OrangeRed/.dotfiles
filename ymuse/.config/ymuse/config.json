@@ -47,6 +47,10 @@
     "MaxSearchResults": 500,
     "Streams": [
         {
+            "Name": "BOX : Japan City Pop -日本のシティポップ",
+            "URI": "https://boxradio-edge-08.streamafrica.net/jpopchill"
+        },
+        {
             "Name": "Jazz Sakura",
             "URI": "http://kathy.torontocast.com:3330/stream/1/?esPlayer\u0026cb=82181.mp3"
         },
@@ -75,7 +79,7 @@
     "MainWindowDimensions": {
         "X": 20,
         "Y": 20,
-        "Width": 819,
+        "Width": 948,
         "Height": 976
     }
 }
