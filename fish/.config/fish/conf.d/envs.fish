@@ -1,31 +1,29 @@
 # Manually source these envs if you don't want to reboot
 if status is-login
-    or test (status current-command) = source
+    or test "$(status current-command)" = "source"
 
-    set -Ux MOZ_ENABLE_WAYLAND "1 firefox"
+    set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
 
-    set -Ux EXA_COLORS "\
-da=38;5;245:\
-di=38;5;245:\
-*.*sh=32:\
-*.*css*=38;5;159:\
-*.*js*=33:\
-*.ts*=34:\
-*.yml=31:\
-*.yaml=31:\
-*.astro=31:"
+    set -gx EXA_COLORS (string replace -r -a '\s+' '' "\
+        da=38;5;245:\
+        di=38;5;245:\
+        *.*sh=32:\
+        *.*css*=38;5;159:\
+        *.*js*=33:\
+        *.ts*=34:\
+        *.yml=31:\
+        *.yaml=31:\
+        *.astro=31:")
 
-    set -Ux FZF_DEFAULT_OPTS "\
--i --cycle --height '95%' \
---layout reverse --prompt '  ' \
---color=bg+:#313244,bg:#1e1e2e,spinner:#f38ba8,hl:#f38ba8 \
---color=fg:#cdd6f4,header:#f38ba8,info:yellow,pointer:#f38ba8 \
---color=marker:#f38ba8,fg+:#cdd6f4,prompt:#f38ba8,hl+:#f38ba8"
+    set -gx FZF_DEFAULT_OPTS (string replace -r -a '\s{3,}' ' ' "\
+        -i --cycle --height '95%' \
+        --layout reverse --prompt '  ' \
+        --color=bg+:#313244,bg:#1e1e2e,spinner:#f38ba8,hl:#f38ba8 \
+        --color=fg:#cdd6f4,header:#f38ba8,info:yellow,pointer:#f38ba8 \
+        --color=marker:#f38ba8,fg+:#cdd6f4,prompt:#f38ba8,hl+:#f38ba8")
 
-    set -Ux GTK_IM_MODULE fcitx5
-    set -Ux QT_IM_MODULE fcitx5
-    set -Ux SDL_IM_MODULE fcitx5
-    set -Ux XMODIFIERS "@im=fcitx5"
-
-    set -Ux SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/gcr/ssh"
+    set -gx GTK_IM_MODULE fcitx5
+    set -gx QT_IM_MODULE fcitx5
+    set -gx SDL_IM_MODULE fcitx5
+    set -gx XMODIFIERS "@im=fcitx5"
 end
