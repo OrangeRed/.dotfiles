@@ -1,103 +1,119 @@
 {
-  "layer": "bottom",
-  "position": "top",
-  "height": 10,
-  "margin": "3, 0, 2, 0",
-  "modules-left": ["sway/workspaces", "sway/mode"],
-  "modules-center": ["clock"],
-  "modules-right": [
-    "mpd",
-    "temperature",
-    "battery",
-    "pulseaudio",
-    "idle_inhibitor",
-    "tray",
-    "custom/power"
-  ],
+    "layer": "top",
+    "position": "top",
+    "height": 24,
+    "spacing": 5,
 
-  "clock": {
-    "interval": 10,
-    "format": "{:%A %b %d - %H:%M %Z}",
-    "align": 1,
-    "timezones": ["America/New_York", "America/Los_Angeles", "Japan"],
-    "tooltip-format": "{timezoned_time_list}\n\n<tt><big>{calendar}</big></tt>"
-  },
+    "modules-left": [
+        // "idle_inhibitor",
+        "hyprland/workspaces",
+        "temperature"
+    ],
+    "modules-center": ["clock"],
+    "modules-right": [
+        "bluetooth",
+        "pulseaudio",
+        "battery",
+        "network",
+        "tray"
+    ],
 
-  "temperature": {
-    "interval": 10,
-    "critical-threshold": 80,
-    "format-critical": "{temperatureC}°",
-    "format": "" // An empty format will hide the module
-  },
-
-  "mpd": {
-    "server": "localhost",
-    "port": 6600,
-    "interval": 5,
-    "format": "{title}",
-    "format-paused": "{stateIcon}",
-    "format-stopped": "",
-    "state-icons": {
-      "paused": "",
-      "playing": ""
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "sort-by-number": true,
     },
-    "on-click": "mpc toggle",
-    "on-click-right": "exec ~/.config/waybar/scripts/copy-song.sh",
-    "on-click-middle": "ymuse",
-    "tooltip": false,
-    "unknown-tag": "  "
-  },
 
-  "battery": {
-    "states": {
-      // "good": 95,
-      "warning": 33,
-      "critical": 10
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "\udb80\udd76",
+            "deactivated": "\udb83\udfaa"
+        }
     },
-    "format": "{icon}  {capacity}%",
-    // "format-full": "",
-    // "format-good": "", // An empty format will hide the module
-    "format-critical": "  {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-icons": ["", "", "", "", ""]
-  },
 
-  "pulseaudio": {
-    // "scroll-step": 1, // %, can be a float
-    "format": "{icon} {volume}% {format_source}",
-    "format-bluetooth": "{icon} {volume}% {format_source}",
-    "format-bluetooth-muted": "  {format_source}",
-    "format-muted": "  {format_source}",
-    "format-source": " {volume}%",
-    "format-source-muted": "",
-    "format-icons": {
-      "headphone": "",
-      "headset": "🎧",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": ["", "", ""]
+    "temperature": {
+        "format": "{temperatureC}°C",
+        "tooltip": false
     },
-    "on-click": "pavucontrol",
-    "ignored-sinks": ["Easy Effects Sink"]
-  },
 
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "",
-      "deactivated": ""
-    }
-  },
+    "custom/platform-profile": {
+	    "format": "{icon} ",
+	    "exec": "~/.config/waybar/platform_profile.sh",
+	    "return-type": "json",
+	    "restart-interval": 1,
+	    "format-icons": {
+	        "quiet": "\udb80\udf2a",
+	        "balanced": "\udb80\ude10",
+	        "performance": "\uf427",
+                "default": "?"
+	    },
+    },
 
-  "tray": {
-    "icon-size": 16,
-    "spacing": 10
-  },
+    "clock": {
+        "format": "{:%b %d | %H:%M %Z}",
+        "tooltip": false
+    },
 
-  "custom/power": {
-    "format": "⏻",
-    "on-click": "exec ~/.config/sway/scripts/power-menu.sh",
-    "tooltip": false
-  }
+    "bluetooth": {
+        "format": "",
+        "format-no-controller": "",
+        "format-disabled": "󰂲",
+        "format-connected": "\udb80\udcb1",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "on-click": "rfkill toggle bluetooth",
+        "on-click-right": "blueman-manager"
+    },
+
+    "pulseaudio": {
+        "format": "{format_source}  {icon} {volume}%",
+        "format-bluetooth": "{format_source}  {icon}󰂯 {volume}%",
+        "format-bluetooth-muted": "{format_source}  ",
+        "format-muted": "{format_source}   ",
+        "format-source": "",
+        "format-source-muted": " ",
+        "format-icons": {
+          "headphone": "",
+          "headset": "󰋎",
+          "phone": "",
+          "portable": "",
+          "car": "",
+          "default": ["", "", " "]
+        },
+        "on-click": "pavucontrol",
+        "ignored-sinks": ["Easy Effects Sink"]
+    },
+
+    "battery": {
+        "interval": 60,
+        "states": {
+          // "good": 95,
+          "warning": 33,
+          "critical": 10
+        },
+        "format": "{icon}  {capacity}%",
+        // "format-full": "",
+        // "format-good": "",
+        "format-critical": "  {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"],
+   },
+
+    "network": {
+        "format": "{essid}",
+        "format-disconnected": "Disconnected",
+        // "format-ethernet": "\udb83\udc9d",
+        // "format-wifi": "{essid} {icon}",
+        "format-icons": ["\udb82\udd2f", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"],
+        "tooltip-format-wifi": "{essid} {icon} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname} \udb83\udc9d",
+        "tooltip-format-disconnected": "Disconnected",
+    },
+
+    "tray": {
+        "icon-size": 20,
+        "spacing": 16
+    },
 }

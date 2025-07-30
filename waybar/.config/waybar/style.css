@@ -1,109 +1,59 @@
+@define-color foreground #eeeeee;
+@define-color foreground-inactive #aaaaaa;
+@define-color background #000000;
+
 * {
-  transition: none;
-  box-shadow: none;
-  font-family: FiraCode Nerd Font;
-  font-size: 16px;
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 17px;
+    padding: 0;
+    margin: 0;
 }
 
 #waybar {
-  margin-top: 14px;
-  background-color: #1e1d2f;
-  opacity: 0.9;
-  border-radius: 12px;
-  border: 2px solid #f5c2e7;
-}
-
-#workspaces {
-  margin: 0 3px;
+    color: @foreground;
+    background-color: @background;
 }
 
 #workspaces button {
-  margin: 3px 0;
-  padding: 0.5rem 1rem;
+    color: @foreground-inactive;
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
 }
 
-#workspaces button.focused {
-  border-radius: 10px;
-  background-color: #f5c2e7;
-  color: #1e1d2f;
+#workspaces button.active {
+    color: @foreground;
+    border-bottom: solid @foreground 1px;
 }
 
 #workspaces button.urgent {
-  background-color: #f38ba8;
-  border-radius: 10px;
+    border-bottom: solid coral 1px;
+    color: coral;
 }
 
-#workspaces button.urgent * {
-  color: #1e1d2f;
+/* #workspaces button:hover {
+    color: #000;
+} */
+
+#bluetooth.disabled,
+#bluetooth.on,
+#bluetooth.off {
+    font-size: 120%;
 }
 
-#mode {
-  margin: 5px;
-  padding: 0.5rem;
-  border-radius: 10px;
-  background-color: #f5c2e7;
-  color: #1e1d2f;
-}
-
-#mpd {
-  font-family: "Source Han Sans JP, FiraCode Nerd Font";
-  letter-spacing: 0.5px;
-  margin: 5px;
-  padding: 0 1rem;
-  border-radius: 10px;
-  background-color: #f5c2e7;
-  color: #1e1d2f;
-}
-
-#mpd.paused {
-  padding: 0 1.3rem 0 1rem;
-}
-
-#mpd.stopped {
-  color: white;
-  background-color: transparent;
-}
-
-#clock,
-#temperature,
-#battery,
-#pulseaudio,
 #idle_inhibitor,
-/* #network, */
-/* #bluetooth, */
-/* #backlight,  */
+#workspaces,
+#temperature,
+#custom-platform-profile {
+    padding-left: 1em;
+}
+
+#pulseaudio,
+#battery,
+#language,
+#network,
+#bluetooth,
 #tray {
-  margin: 4px;
-  padding: 0 5px;
-  border-radius: 20px;
-  min-width: 10px;
-  background-color: transparent;
-}
-
-#battery.warning {
-  color: yellow;
-}
-
-#temperature.critical,
-#battery.critical {
-  color: red;
-}
-
-#battery.charging {
-  color: #a6e3a1;
-}
-
-#pulseaudio.bluetooth {
-  padding-top: 4px;
-}
-
-#pulseaudio.muted {
-  padding-top: 0;
-}
-
-#custom-power {
-  margin: 4px;
-  padding: 0 15px 0 0;
-  border-radius: 10px;
-  min-width: 15px;
+    padding-right: 1em;
 }
