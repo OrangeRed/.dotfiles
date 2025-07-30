@@ -1,7 +1,7 @@
 hide_scroll=true
 show=drun
 width=25%
-lines=10
+height=32%
 line_wrap=word
 term=xfce4-terminal
 allow_markup=true
