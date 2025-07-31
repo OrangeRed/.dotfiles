@@ -1,0 +1,17 @@
+[Unit]
+Description=Highly customizable Wayland bar for Sway and Wlroots based compositors.
+Documentation=https://github.com/Alexays/Waybar/wiki/
+# order startup after WM
+After=wayland-session@hyprland.desktop.target
+
+[Service]
+Type=exec
+# Repurpose XDG Autostart filtering
+ExecCondition=/lib/systemd/systemd-xdg-autostart-condition "wlroots:sway:Wayfire:labwc:Hyprland" ""
+ExecStart=/usr/bin/waybar
+ExecReload=kill -SIGUSR2 $MAINPID
+Restart=on-failure
+Slice=app-graphical.slice
+
+[Install]
+WantedBy=wayland-session@hyprland.desktop.target
