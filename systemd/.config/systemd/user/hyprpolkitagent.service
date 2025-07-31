@@ -1,0 +1,15 @@
+[Unit]
+Description=Hyprland Polkit Authentication Agent
+After=wayland-session@hyprland.desktop.target
+
+[Service]
+Type=exec
+# Repurpose XDG Autostart filtering
+ExecCondition=/lib/systemd/systemd-xdg-autostart-condition "Hyprland" ""
+ExecStart=/usr/lib/hyprpolkitagent/hyprpolkitagent
+TimeoutStopSec=5sec
+Restart=on-failure
+Slice=session-graphical.slice
+
+[Install]
+WantedBy=wayland-session@hyprland.desktop.target
