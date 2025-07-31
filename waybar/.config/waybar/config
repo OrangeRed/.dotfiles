@@ -110,6 +110,7 @@
         "tooltip-format-wifi": "{essid} {icon} ({signalStrength}%)",
         "tooltip-format-ethernet": "{ifname} \udb83\udc9d",
         "tooltip-format-disconnected": "Disconnected",
+        "on-click": "iwgtk"
     },
 
     "tray": {
