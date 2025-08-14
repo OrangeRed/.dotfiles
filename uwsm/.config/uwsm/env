@@ -3,3 +3,7 @@ export XCURSOR_SIZE=24
 export QT_QPA_PLATFORMTHEME=qt6ct
 
 export MOZ_ENABLE_WAYLAND=1 firefox
+
+export QT_IM_MODULE=fcitx5
+export SDL_IM_MODULE=fcitx5
+export XMODIFIERS="@im=fcitx5"
