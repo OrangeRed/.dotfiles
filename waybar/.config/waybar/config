@@ -93,11 +93,11 @@
           "warning": 33,
           "critical": 10
         },
-        "format": "{icon}  {capacity}%",
+        "format": "{icon}   {capacity}%",
         // "format-full": "",
         // "format-good": "",
-        "format-critical": "  {capacity}%",
-        "format-charging": " {capacity}%",
+        "format-critical": "   {capacity}%",
+        "format-charging": "  {capacity}%",
         "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"],
    },
 
