@@ -1,0 +1,15 @@
+[Unit]
+Description=Clipboard history “manager” for wayland
+Documentation=https://github.com/sentriz/cliphist
+After=wayland-session@hyprland.desktop.target
+
+[Service]
+Type=exec
+# Repurpose XDG Autostart filtering
+ExecCondition=/lib/systemd/systemd-xdg-autostart-condition "wlroots:sway:Wayfire:labwc:Hyprland" ""
+ExecStart=wl-paste --type text --watch cliphist store
+Restart=on-failure
+Slice=app-graphical.slice
+
+[Install]
+WantedBy=wayland-session@hyprland.desktop.target
