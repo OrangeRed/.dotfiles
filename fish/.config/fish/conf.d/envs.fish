@@ -20,9 +20,4 @@ if status is-login
         " --color=bg+:#313244,bg:#1e1e2e,spinner:#f38ba8,hl:#f38ba8" \
         " --color=fg:#cdd6f4,header:#f38ba8,info:yellow,pointer:#f38ba8" \
         " --color=marker:#f38ba8,fg+:#cdd6f4,prompt:#f38ba8,hl+:#f38ba8")
-
-    # set -gx GTK_IM_MODULE fcitx5
-    # set -gx QT_IM_MODULE fcitx5
-    # set -gx SDL_IM_MODULE fcitx5
-    # set -gx XMODIFIERS "@im=fcitx5"
 end
