@@ -1,0 +1,14 @@
+[Unit]
+Description=Hyprland's idle daemon
+Documentation=https://wiki.hyprland.org/Hypr-Ecosystem/hypridle
+After=wayland-session@hyprland.desktop.target
+ConditionEnvironment=WAYLAND_DISPLAY
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/hypridle
+Restart=on-failure
+Slice=background-graphical.slice
+
+[Install]
+WantedBy=wayland-session@hyprland.desktop.target

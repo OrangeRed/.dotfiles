@@ -9,7 +9,7 @@ Type=exec
 ExecCondition=/lib/systemd/systemd-xdg-autostart-condition "wlroots:sway:Wayfire:labwc:Hyprland" ""
 ExecStart=wl-paste --type image --watch cliphist -max-items 20 store
 Restart=on-failure
-Slice=app-graphical.slice
+Slice=background-graphical.slice
 
 [Install]
 WantedBy=wayland-session@hyprland.desktop.target
