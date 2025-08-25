@@ -32,13 +32,10 @@
     color: coral;
 }
 
-/* #workspaces button:hover {
-    color: #000;
-} */
-
 #bluetooth.disabled,
 #bluetooth.on,
-#bluetooth.off {
+#bluetooth.off,
+#mpd {
     font-size: 120%;
 }
 
@@ -55,5 +52,9 @@
 #network,
 #bluetooth,
 #tray {
-    padding-right: 1em;
+    padding-right: 0.5em;
+}
+
+#mpd {
+    padding-right: 0.75em;
 }

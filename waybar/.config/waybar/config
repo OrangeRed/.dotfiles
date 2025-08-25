@@ -11,6 +11,7 @@
     ],
     "modules-center": ["clock"],
     "modules-right": [
+        "mpd",
         "bluetooth",
         "pulseaudio",
         "battery",
@@ -50,15 +51,30 @@
 	    },
     },
 
+    "mpd": {
+        "format": "󰝚 ",
+        "format-disconnected": "Disconnected",
+        "format-stopped": "󰝛 ",
+        "interval": 5,
+        "unknown-tag": "",
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": " {title} ",
+        "tooltip-format-disconnected": "MPD (disconnected)",
+        "on-click": "ymuse"
+    },
+
     "clock": {
         "format": "{:%b %d | %H:%M %Z}",
         "tooltip": false
     },
 
     "bluetooth": {
-        "format": "",
+        "format": " ",
         "format-no-controller": "",
-        "format-disabled": "󰂲",
+        "format-disabled": "󰂲 ",
         "format-connected": "\udb80\udcb1",
         "tooltip-format": "{controller_alias}\t{controller_address}",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
@@ -68,10 +84,10 @@
     },
 
     "pulseaudio": {
-        "format": "{format_source}  {icon} {volume}%",
-        "format-bluetooth": "{format_source}  {icon}󰂯 {volume}%",
-        "format-bluetooth-muted": "{format_source}  ",
-        "format-muted": "{format_source}   ",
+        "format": "{format_source}  {icon}  {volume}% ",
+        "format-bluetooth": "{format_source}  {icon}󰂯 {volume}% ",
+        "format-bluetooth-muted": "{format_source}   ",
+        "format-muted": "{format_source}    ",
         "format-source": "",
         "format-source-muted": " ",
         "format-icons": {
@@ -107,10 +123,9 @@
         // "format-ethernet": "\udb83\udc9d",
         // "format-wifi": "{essid} {icon}",
         "format-icons": ["\udb82\udd2f", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"],
-        "tooltip-format-wifi": "{essid} {icon} ({signalStrength}%)",
+        "tooltip-format-wifi": "{essid} {icon}  ({signalStrength}%)",
         "tooltip-format-ethernet": "{ifname} \udb83\udc9d",
-        "tooltip-format-disconnected": "Disconnected",
-        "on-click": "iwgtk"
+        "tooltip-format-disconnected": "Disconnected"
     },
 
     "tray": {
