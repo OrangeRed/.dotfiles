@@ -1,48 +1,39 @@
-@define-color highlight #f5c2e7;
-@define-color base1  #404552;
-@define-color base2 #40455;
-@define-color base3  #4b5160;
-
-* {
-  font-family: FiraCode Nerd Font;
-}
-
 window {
-  border: 1px solid @highlight;
+    margin: 0px;
+    border: 1px solid #88c0d0;
+    background-color: #2e3440;
 }
 
 #input {
-  margin-bottom: 15px;
-  padding: 3px;
-  border-radius: 5px;
-  border: none;
-  color: white;
+    margin: 5px;
+    border: none;
+    color: #d8dee9;
+    background-color: #3b4252;
 }
 
 #inner-box {
-  background-color: @base3;
+    margin: 5px;
+    border: none;
+    background-color: #2e3440;
 }
 
 #outer-box {
-  margin: 5px;
-  padding: 15px;
-  background-color: @base2;
+    margin: 5px;
+    border: none;
+    background-color: #2e3440;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
 }
 
 #text {
-  padding: 5px;
-  color: white;
-}
-
-#text:selected {
-  color: black;
-}
-
-#entry:nth-child(even) {
-  background-color: @base1;
+    margin: 5px;
+    border: none;
+    color: #d8dee9;
 }
 
 #entry:selected {
-  background-color: @highlight;
-  color: black;
+    background-color: #3b4252;
 }
