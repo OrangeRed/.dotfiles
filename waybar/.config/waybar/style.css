@@ -32,6 +32,12 @@
     color: coral;
 }
 
+#workspaces button.special {
+    color: @background;
+    background-color: @foreground-inactive;
+    font-style: italic;
+}
+
 #bluetooth.disabled,
 #bluetooth.on,
 #bluetooth.off,

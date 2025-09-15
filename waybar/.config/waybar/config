@@ -23,6 +23,10 @@
         "format": "{icon}",
         "on-click": "activate",
         "sort-by-number": true,
+        "show-special": true,
+        "format-icons": {
+            "special": "tmp"
+        }
     },
 
     "idle_inhibitor": {
@@ -38,24 +42,11 @@
         "tooltip": false
     },
 
-    "custom/platform-profile": {
-	    "format": "{icon} ",
-	    "exec": "~/.config/waybar/platform_profile.sh",
-	    "return-type": "json",
-	    "restart-interval": 1,
-	    "format-icons": {
-	        "quiet": "\udb80\udf2a",
-	        "balanced": "\udb80\ude10",
-	        "performance": "\uf427",
-                "default": "?"
-	    },
-    },
-
     "mpd": {
         "format": "󰝚 ",
         "format-disconnected": "Disconnected",
         "format-stopped": "󰝛 ",
-        "interval": 5,
+        "interval": 60,
         "unknown-tag": "",
         "state-icons": {
             "paused": "",
